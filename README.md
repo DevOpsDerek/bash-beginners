@@ -4,6 +4,10 @@
 
 A beginner-friendly Bash course with 10 hands-on lessons, `shellcheck` linting, and `bats-core` tests.
 
+GitHub Actions runs ShellCheck and the Bats suite on pushes and pull requests
+to `main`. GitHub Actions and gh-aw automation are validated through the
+centrally maintained `DevOpsDerek/workflows` repository.
+
 ## Course overview
 
 This course teaches Bash fundamentals through small, heavily commented lesson scripts. Each lesson includes:
