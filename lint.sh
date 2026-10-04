@@ -6,8 +6,8 @@ if ! command -v shellcheck &>/dev/null; then
   exit 1
 fi
 
-echo "Running shellcheck on lessons/..."
-shellcheck lessons/*.sh
+echo "Running shellcheck on scripts and lessons/..."
+shellcheck ./*.sh lessons/*.sh
 echo "Running shellcheck on tests/..."
 shellcheck --shell=bash tests/*.bats
 echo "All files passed shellcheck."

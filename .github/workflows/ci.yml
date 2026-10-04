@@ -13,17 +13,10 @@ permissions:
 jobs:
   lint:
     name: Lint (shellcheck)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install shellcheck
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y shellcheck
-      - name: Lint lessons
-        run: shellcheck lessons/*.sh
-      - name: Lint tests
-        run: shellcheck --shell=bash tests/*.bats
+    uses: DevOpsDerek/workflows/.github/workflows/lint/shell.yml@cd4f07509e9efb0c498217c3be352e762bd0c149
+    with:
+      shellcheck-version: 0.10.0
+      working-directory: .
 
   test:
     name: Test (bats-core)
