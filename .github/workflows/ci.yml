@@ -13,7 +13,7 @@ permissions:
 jobs:
   lint:
     name: Lint (shellcheck)
-    uses: DevOpsDerek/workflows/.github/workflows/lint/shell.yml@cd4f07509e9efb0c498217c3be352e762bd0c149
+    uses: DevOpsDerek/workflows/.github/workflows/lint-shell.yml@c4ac3847334c8944a48619ae4f3f0d622f4a074b
     with:
       shellcheck-version: 0.10.0
       working-directory: .
